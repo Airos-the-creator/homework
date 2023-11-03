@@ -1,0 +1,12 @@
+/Users/admin/Documents/GitHub/homework/SimonsVoss.CodingCase/SimonsVoss.CodingCase.Contract/bin/Debug/net6.0/SimonsVoss.CodingCase.Contract.deps.json
+/Users/admin/Documents/GitHub/homework/SimonsVoss.CodingCase/SimonsVoss.CodingCase.Contract/bin/Debug/net6.0/SimonsVoss.CodingCase.Contract.dll
+/Users/admin/Documents/GitHub/homework/SimonsVoss.CodingCase/SimonsVoss.CodingCase.Contract/bin/Debug/net6.0/SimonsVoss.CodingCase.Contract.pdb
+/Users/admin/Documents/GitHub/homework/SimonsVoss.CodingCase/SimonsVoss.CodingCase.Contract/obj/Debug/net6.0/SimonsVoss.CodingCase.Contract.csproj.AssemblyReference.cache
+/Users/admin/Documents/GitHub/homework/SimonsVoss.CodingCase/SimonsVoss.CodingCase.Contract/obj/Debug/net6.0/SimonsVoss.CodingCase.Contract.GeneratedMSBuildEditorConfig.editorconfig
+/Users/admin/Documents/GitHub/homework/SimonsVoss.CodingCase/SimonsVoss.CodingCase.Contract/obj/Debug/net6.0/SimonsVoss.CodingCase.Contract.AssemblyInfoInputs.cache
+/Users/admin/Documents/GitHub/homework/SimonsVoss.CodingCase/SimonsVoss.CodingCase.Contract/obj/Debug/net6.0/SimonsVoss.CodingCase.Contract.AssemblyInfo.cs
+/Users/admin/Documents/GitHub/homework/SimonsVoss.CodingCase/SimonsVoss.CodingCase.Contract/obj/Debug/net6.0/SimonsVoss.CodingCase.Contract.csproj.CoreCompileInputs.cache
+/Users/admin/Documents/GitHub/homework/SimonsVoss.CodingCase/SimonsVoss.CodingCase.Contract/obj/Debug/net6.0/SimonsVoss.CodingCase.Contract.dll
+/Users/admin/Documents/GitHub/homework/SimonsVoss.CodingCase/SimonsVoss.CodingCase.Contract/obj/Debug/net6.0/refint/SimonsVoss.CodingCase.Contract.dll
+/Users/admin/Documents/GitHub/homework/SimonsVoss.CodingCase/SimonsVoss.CodingCase.Contract/obj/Debug/net6.0/SimonsVoss.CodingCase.Contract.pdb
+/Users/admin/Documents/GitHub/homework/SimonsVoss.CodingCase/SimonsVoss.CodingCase.Contract/obj/Debug/net6.0/ref/SimonsVoss.CodingCase.Contract.dll

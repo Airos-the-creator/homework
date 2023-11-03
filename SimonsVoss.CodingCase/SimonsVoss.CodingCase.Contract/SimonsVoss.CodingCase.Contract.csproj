@@ -7,12 +7,11 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="Model\" />
+    <None Remove="Dto\" />
+    <None Remove="Enum\" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Model\" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\SimonsVoss.CodingCase.Contract\SimonsVoss.CodingCase.Contract.csproj" />
+    <Folder Include="Dto\" />
+    <Folder Include="Enum\" />
   </ItemGroup>
 </Project>

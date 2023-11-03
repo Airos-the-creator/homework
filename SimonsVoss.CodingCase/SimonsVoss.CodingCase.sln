@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimonsVoss.CodingCase.Logic
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimonsVoss.CodingCase.Data", "SimonsVoss.CodingCase.Data\SimonsVoss.CodingCase.Data.csproj", "{03686007-C747-488F-91B9-559CCCA0CED9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimonsVoss.CodingCase.Contract", "SimonsVoss.CodingCase.Contract\SimonsVoss.CodingCase.Contract.csproj", "{B5D0C21E-7D54-4AB6-90E3-B397B476C60B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{03686007-C747-488F-91B9-559CCCA0CED9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{03686007-C747-488F-91B9-559CCCA0CED9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{03686007-C747-488F-91B9-559CCCA0CED9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B5D0C21E-7D54-4AB6-90E3-B397B476C60B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B5D0C21E-7D54-4AB6-90E3-B397B476C60B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B5D0C21E-7D54-4AB6-90E3-B397B476C60B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B5D0C21E-7D54-4AB6-90E3-B397B476C60B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
