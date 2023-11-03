@@ -7,9 +7,14 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="data.json" />
+    <None Remove="Newtonsoft.Json" />
+    <None Remove="Microsoft.Extensions.DependencyInjection" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="data.json" />
+    <ProjectReference Include="..\SimonsVoss.CodingCase.Logic\SimonsVoss.CodingCase.Logic.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="7.0.0" />
   </ItemGroup>
 </Project>

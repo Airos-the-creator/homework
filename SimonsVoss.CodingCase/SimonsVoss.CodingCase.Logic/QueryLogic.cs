@@ -5,13 +5,16 @@ namespace SimonsVoss.CodingCase.Logic
 {
     public class QueryLogic : IQueryLogic
     {
-        public QueryLogic()
+        private readonly IDataRepository dataRepository;
+        public QueryLogic(IDataRepository dataRepository)
         {
+            this.dataRepository = dataRepository;
         }
 
         public IList<QueryResult> QueryData(string searchString)
         {
-            return new List<QueryResult>();
+            var locks = this.dataRepository.Locks.FirstOrDefault(l => l.Name.ToLower().Contains(searchString));
+            return new List<QueryResult> { new QueryResult(locks.Name, locks.Id)};
         }
     }
 }
