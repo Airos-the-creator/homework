@@ -4,7 +4,6 @@ namespace SimonsVoss.CodingCase.Logic.Model
 {
     public class Group : QueryableEntity
     {
-        public Guid Id { get; set; }
         public string Name { get; set; }
         public string Description { get; set; }
 
@@ -17,9 +16,8 @@ namespace SimonsVoss.CodingCase.Logic.Model
         };
         protected override Dictionary<string, int> FieldToWeightMapping => fieldToWeightMapping;
 
-        public Group(Guid id, string name, string description)
+        public Group(Guid id, string name, string description) : base(id)
         {
-            Id = id;
             Name = name;
             Description = description;
         }

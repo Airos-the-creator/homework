@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using Newtonsoft.Json;
 using SimonsVoss.CodingCase.Logic;
 using SimonsVoss.CodingCase.Logic.Model;
@@ -11,6 +12,11 @@ namespace SimonsVoss.CodingCase.Data
         public IQueryable<Lock> Locks { get; set; } = new List<Lock>().AsQueryable();
         public IQueryable<Medium> Media { get; set; } = new List<Medium>().AsQueryable();
         public IQueryable<Group> Groups { get; set; } = new List<Group>().AsQueryable();
+
+        public IQueryable<QueryableEntity> QueryableEntities => (Buildings as IQueryable<QueryableEntity>)
+            .Union(Locks as IQueryable<QueryableEntity>)
+            .Union(Media as IQueryable<QueryableEntity>)
+            .Union(Groups as IQueryable<QueryableEntity>);
 
         public DataRepository()
         {

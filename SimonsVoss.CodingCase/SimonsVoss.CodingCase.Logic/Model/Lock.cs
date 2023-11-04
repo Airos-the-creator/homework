@@ -5,7 +5,6 @@ namespace SimonsVoss.CodingCase.Logic.Model
 {
     public class Lock : QueryableEntity
     {
-        public Guid Id { get; set; }
         public Guid BuildingId { get; set; }
         public Building? BuildingOfLock { get; set; }
         public string Type { get; set; }
@@ -25,9 +24,6 @@ namespace SimonsVoss.CodingCase.Logic.Model
             { nameof(Lock.Floor), 6},
             { nameof(Lock.RoomNumber), 6},
             { nameof(Lock.Description), 6},
-            { $"{nameof(Lock.BuildingOfLock)}.{nameof(Building.Name)}", 6},
-            { $"{nameof(Lock.BuildingOfLock)}.{nameof(Building.ShortCut)}", 5},
-            { $"{nameof(Lock.BuildingOfLock)}.{nameof(Building.Description)}", 0}
         };
         protected override Dictionary<string, int> FieldToWeightMapping => fieldToWeightMapping;
 
@@ -38,9 +34,8 @@ namespace SimonsVoss.CodingCase.Logic.Model
             { nameof(Building.Description), 0}
         };
 
-        public Lock(Guid id, Guid buildingId, string type, string name, string serialNumber, string floor, string roomNumber, string description)
+        public Lock(Guid id, Guid buildingId, string type, string name, string serialNumber, string floor, string roomNumber, string description) : base(id)
         {
-            Id = id;
             BuildingId = buildingId;
             Type = type;
             Name = name;

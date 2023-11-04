@@ -5,8 +5,11 @@ namespace SimonsVoss.CodingCase.Logic.Model
     {
         public abstract string DisplayName { get; }
 
-        public QueryableEntity()
+        public Guid Id { get; set; }
+
+        public QueryableEntity(Guid id)
         {
+            this.Id = id;
         }
 
         protected abstract Dictionary<string, int> FieldToWeightMapping { get; }

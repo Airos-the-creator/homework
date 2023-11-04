@@ -5,7 +5,7 @@ namespace SimonsVoss.CodingCase.Logic
 {
     public interface IDataRepository
     {
-        public IQueryable<Lock> Locks{ get; set; }
+        IQueryable<QueryableEntity> QueryableEntities { get; }
 
     }
 }

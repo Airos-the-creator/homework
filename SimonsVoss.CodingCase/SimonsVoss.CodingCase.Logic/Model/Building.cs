@@ -4,7 +4,6 @@ namespace SimonsVoss.CodingCase.Logic.Model
 {
     public class Building : QueryableEntity
     {
-        public Guid Id { get; }
         public string ShortCut { get; private set; }
         public string Name { get; private set; }
         public string Description { get; private set; }
@@ -17,11 +16,10 @@ namespace SimonsVoss.CodingCase.Logic.Model
             { nameof(Building.ShortCut), 7},
             { nameof(Building.Description), 5}
         };
-        protected override Dictionary<string, int> FieldToWeightMapping => throw new NotImplementedException();
+        protected override Dictionary<string, int> FieldToWeightMapping => fieldToWeightMapping;
 
-        public Building(Guid id, string shortCut, string name, string description)
+        public Building(Guid id, string shortCut, string name, string description) : base(id)
         {
-            this.Id = id;
             this.ShortCut = shortCut;
             this.Name = name;
             this.Description = description;

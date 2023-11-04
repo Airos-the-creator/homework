@@ -13,8 +13,12 @@ namespace SimonsVoss.CodingCase.Logic
 
         public IList<QueryResult> QueryData(string searchString)
         {
-            var locks = this.dataRepository.Locks.FirstOrDefault(l => l.Name.ToLower().Contains(searchString));
-            return new List<QueryResult> { new QueryResult(locks.Name, locks.Id, locks.GetScoreForFields(searchString))};
+            var data = this.dataRepository.QueryableEntities
+                .Select(e => new QueryResult(e.DisplayName, e.Id, e.GetScore(searchString)))
+                .Where(qr => qr.Score >= 0)
+                .OrderByDescending(qr => qr.Score)
+                .ToList();
+            return data;
         }
     }
 }

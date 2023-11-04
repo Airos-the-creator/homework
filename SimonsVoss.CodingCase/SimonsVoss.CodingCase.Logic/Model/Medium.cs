@@ -4,7 +4,6 @@ namespace SimonsVoss.CodingCase.Logic.Model
 {
     public class Medium : QueryableEntity
     {
-        public Guid Id { get; set; }
         public Guid GroupId { get; set; }
         public Group? GroupOfMedium { get; set; }
         public string Type { get; set; }
@@ -29,9 +28,8 @@ namespace SimonsVoss.CodingCase.Logic.Model
             { nameof(Group.Description), 0},
         };
 
-        public Medium(Guid id, Guid groupId, string type, string owner, string serialNumber, string description)
+        public Medium(Guid id, Guid groupId, string type, string owner, string serialNumber, string description) : base(id)
         {
-            Id = id;
             GroupId = groupId;
             Type = type;
             Owner = owner;
