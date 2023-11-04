@@ -26,7 +26,7 @@ namespace SimonsVoss.CodingCase.Data
             var groupLookup = Groups.ToLookup(g => g.Id);
             foreach (var medium in Media)
             {
-                medium.Group = groupLookup[medium.GroupId].First();
+                medium.GroupOfMedium = groupLookup[medium.GroupId].First();
             }
         }
     }
