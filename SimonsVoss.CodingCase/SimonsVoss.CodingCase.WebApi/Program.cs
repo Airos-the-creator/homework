@@ -11,7 +11,9 @@ builder.Services.AddTransient<IQueryLogic, QueryLogic>();
 builder.Services.AddSingleton<IDataRepository>(sp =>
 {
     var dataAsText = File.ReadAllText(@"resources/data.json");
-    return JsonConvert.DeserializeObject<DataRepository>(dataAsText) ?? new DataRepository();
+    var dataRepository = JsonConvert.DeserializeObject<DataRepository>(dataAsText) ?? new DataRepository();
+    dataRepository.Initialize();
+    return dataRepository;
 });
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();

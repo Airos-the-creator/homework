@@ -15,6 +15,20 @@ namespace SimonsVoss.CodingCase.Data
         public DataRepository()
         {
         }
+
+        public void Initialize()
+        {
+            var buildingLookup = Buildings.ToLookup(b => b.Id);
+            foreach (var lockEntity in Locks)
+            {
+                lockEntity.BuildingOfLock = buildingLookup[lockEntity.BuildingId].First();
+            }
+            var groupLookup = Groups.ToLookup(g => g.Id);
+            foreach (var medium in Media)
+            {
+                medium.Group = groupLookup[medium.GroupId].First();
+            }
+        }
     }
 }
 
