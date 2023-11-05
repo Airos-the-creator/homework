@@ -3,5 +3,5 @@
 </div>
 
 <ul>
-    <li *ngFor="let item of resultData" (click)="openDetails()" class="mb-2 listitem">{{item.displayName}}  Score: {{item.score}}</li>
+    <li *ngFor="let item of resultData" (click)="openDetails(item.itemId)" class="mb-2 listitem">{{item.displayName}}  Score: {{item.score}}</li>
 </ul>

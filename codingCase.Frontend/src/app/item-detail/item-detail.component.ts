@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
+import { ItemDetailProperty } from '../model/itemDetailProperty';
+import { QueryService } from '../services/query.service';
 
 @Component({
   selector: 'app-item-detail',
@@ -8,9 +10,13 @@ import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
 })
 export class ItemDetailComponent implements OnInit {
 
-  constructor(public activeModal: NgbActiveModal) { }
+  public itemId!: string;
+  public displayProperties : ItemDetailProperty[] = [];
+  constructor(public activeModal: NgbActiveModal,
+    private readonly queryService: QueryService) { }
 
-  ngOnInit(): void {
+  async ngOnInit() {
+    this.displayProperties = (await this.queryService.getItemDetails(this.itemId)).properties;
   }
 
 }

@@ -28,8 +28,9 @@ export class SearchComponent implements OnInit {
     this.resultData = await this.queryService.query(this.searchText);
   }
 
-  public openDetails() {
+  public openDetails(itemId: string) {
     const modalRef = this.modalService.open(ItemDetailComponent);
+    modalRef.componentInstance.itemId = itemId;
   }
 
 }

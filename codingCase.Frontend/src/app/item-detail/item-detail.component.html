@@ -1,1 +1,4 @@
-<p>item-detail works!</p>
+<p>Item details:</p>
+<ul>
+    <li *ngFor="let item of displayProperties" class="mb-2">{{item.name}}: {{item.value}}</li>
+</ul>
