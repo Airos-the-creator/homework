@@ -1,7 +1,7 @@
-<div>
+<div class="mb-3">
     <input type="text" [(ngModel)]="searchText" placeholder="please enter a searchtext" (keyup.enter)="queryData()"> <button (click)="queryData()">Search</button>
 </div>
 
 <ul>
-    <li *ngFor="let item of resultData">{{item.displayName}}  Score: {{item.score}}</li>
+    <li *ngFor="let item of resultData" (click)="openDetails()" class="mb-2 listitem">{{item.displayName}}  Score: {{item.score}}</li>
 </ul>
