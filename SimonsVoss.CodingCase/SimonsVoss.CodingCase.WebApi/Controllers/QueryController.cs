@@ -22,7 +22,8 @@ public class QueryController : ControllerBase
         return Task.FromResult<IActionResult>(Ok(result));
     }
 
-    [HttpGet(Name = "GetItemDetails")]
+    [HttpGet]
+    [Route("details")]
     public Task<IActionResult> GetItemDetails([FromQuery] Guid itemId)
     {
         ItemDetails result = this.queryLogic.GetItemDetails(itemId);
