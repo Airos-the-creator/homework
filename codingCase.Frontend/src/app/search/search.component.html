@@ -1,0 +1,7 @@
+<div>
+    <input type="text" [(ngModel)]="searchText" placeholder="please enter a searchtext" (keyup.enter)="queryData()"> <button (click)="queryData()">Search</button>
+</div>
+
+<ul>
+    <li *ngFor="let item of resultData">{{item.displayName}}  Score: {{item.score}}</li>
+</ul>
