@@ -6,6 +6,6 @@ namespace SimonsVoss.CodingCase.Logic
     public interface IDataRepository
     {
         IQueryable<QueryableEntity> QueryableEntities { get; }
-
+        QueryableEntity? GetById(Guid id);
     }
 }

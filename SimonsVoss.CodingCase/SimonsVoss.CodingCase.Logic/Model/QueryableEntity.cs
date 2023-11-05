@@ -1,4 +1,6 @@
 ﻿using System;
+using static System.Formats.Asn1.AsnWriter;
+
 namespace SimonsVoss.CodingCase.Logic.Model
 {
     public abstract class QueryableEntity
@@ -53,6 +55,24 @@ namespace SimonsVoss.CodingCase.Logic.Model
                 score = weight;
             }
             return true;
+        }
+
+        public virtual IList<Tuple<string, string?>> GetQueryableFieldsWithValues()
+        {
+            return GetOwnQueryableFieldsWithValues();
+        }
+
+        protected IList<Tuple<string, string?>> GetOwnQueryableFieldsWithValues()
+        {
+            var propertiesWithValues = new List<Tuple<string, string?>>();
+            foreach (var prop in this.GetType().GetProperties())
+            {
+                if (this.FieldToWeightMapping.ContainsKey(prop.Name))
+                {
+                    propertiesWithValues.Add(new Tuple<string, string?>(prop.Name, prop.GetValue(this)?.ToString()));
+                }
+            }
+            return propertiesWithValues;
         }
     }
 }

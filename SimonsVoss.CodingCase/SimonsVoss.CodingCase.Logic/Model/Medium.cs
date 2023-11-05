@@ -50,6 +50,13 @@ namespace SimonsVoss.CodingCase.Logic.Model
 
             return Math.Max(0, ownScore) + Math.Max(0, groupScore);
         }
+
+        public override IList<Tuple<string, string?>> GetQueryableFieldsWithValues()
+        {
+            var propertiesWithValues = base.GetQueryableFieldsWithValues();
+            propertiesWithValues.Add(new Tuple<string, string?>("Group", this.GroupOfMedium?.DisplayName));
+            return propertiesWithValues;
+        }
     }
 }
 

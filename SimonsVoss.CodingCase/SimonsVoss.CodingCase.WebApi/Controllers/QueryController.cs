@@ -1,10 +1,11 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using SimonsVoss.CodingCase.Contract.Dto;
 using SimonsVoss.CodingCase.Logic;
 
 namespace SimonsVoss.CodingCase.WebApi.Controllers;
 
 [ApiController]
-[Route("[controller]")]
+[Route("api/[controller]")]
 public class QueryController : ControllerBase
 {
     private readonly IQueryLogic queryLogic;
@@ -18,6 +19,13 @@ public class QueryController : ControllerBase
     public Task<IActionResult> Get([FromQuery] string searchString)
     {
         var result = this.queryLogic.QueryData(searchString);
+        return Task.FromResult<IActionResult>(Ok(result));
+    }
+
+    [HttpGet(Name = "GetItemDetails")]
+    public Task<IActionResult> GetItemDetails([FromQuery] Guid itemId)
+    {
+        ItemDetails result = this.queryLogic.GetItemDetails(itemId);
         return Task.FromResult<IActionResult>(Ok(result));
     }
 }

@@ -58,6 +58,13 @@ namespace SimonsVoss.CodingCase.Logic.Model
 
             return Math.Max(0, ownFieldScore) + Math.Max(0, buildingFieldScore);
         }
+
+        public override IList<Tuple<string, string?>> GetQueryableFieldsWithValues()
+        {
+            var propertiesWithValues = base.GetQueryableFieldsWithValues();
+            propertiesWithValues.Add(new Tuple<string, string?>("Building", this.BuildingOfLock?.DisplayName));
+            return propertiesWithValues;
+        }
     }
 }
 

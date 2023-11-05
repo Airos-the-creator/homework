@@ -5,6 +5,7 @@ namespace SimonsVoss.CodingCase.Logic
 {
     public interface IQueryLogic
     {
+        ItemDetails GetItemDetails(Guid itemId);
         IList<QueryResult> QueryData(string searchString);
     }
 }
